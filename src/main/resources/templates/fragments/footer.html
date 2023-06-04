@@ -1,0 +1,10 @@
+<head>
+    <script>
+        'test'
+    </script>
+</head>
+<body>
+<footer th:fragment="footer">
+    <a class="footer-link" target="_blank" th:href="${@environment.getProperty('github.repo_url')}"><img th:src="@{/images/github.svg}" alt="GitHub logo">Source Code</a>
+</footer>
+</body>

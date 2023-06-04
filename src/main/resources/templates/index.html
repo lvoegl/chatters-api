@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:insert="~{fragments/head :: head (title='')}">
+</head>
+<body>
+  <main>
+    <h1>Chatter Tools</h1>
+    <div class="alert" th:if="${success != null || error != null}">
+      <span th:if="${success != null}" class="success" th:text="${success}">Success</span>
+      <span th:if="${error != null}" class="error" th:text="${error}">Error</span>
+    </div>
+    <section th:if="${authUrl != null}">
+      <p>We need some permissions to read chatters and roles.</p>
+      <p>Click below to authorize and make your channel's list of moderators, VIPs and chatters publicly available.</p>
+      <div class="link-btn">
+        <a th:href="${authUrl}">authorize</a>
+      </div>
+    </section>
+    <section>
+      <h2>API Documentation</h2>
+      <p>This project uses <a href="https://swagger.io/docs/">Swagger</a> for documenting its API.</p>
+      <p>The full documentation is available <a th:href="${@environment.getProperty('springdoc.swagger-ui.path')}">here</a>.</p>
+    </section>
+  </main>
+  <footer th:replace="~{fragments/footer}"></footer>
+</body>
+</html>

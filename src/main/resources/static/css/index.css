@@ -1,0 +1,128 @@
+:root {
+    --color-accent: #a500bc;
+    --color-accent-dark: #8f00a3;
+    --color-accent-darker: #770088;
+    --color-accent-light: #d8b0dc;
+    --color-accent-lighter: #fad5ff;
+    --color-background: #29282d;
+    --color-background-dark: #222125;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 1.8em;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+section {
+    padding: 0 8%;
+    margin: 0.1em 0;
+}
+
+a {
+    color: var(--color-accent);
+}
+
+a:hover {
+    color: var(--color-accent-dark);
+}
+
+p {
+    margin: 0.3em 0;
+}
+
+.alert {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.alert span {
+    font-weight: bold;
+    font-size: 1.3em;
+    border-radius: 1em;
+    padding: 0.4em 0.5em;
+    min-width: 40%;
+}
+
+.error {
+    background-color: red;
+}
+
+.success {
+    background-color: green;
+}
+
+.link-btn {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.link-btn a {
+    font-size: 1.8em;
+    font-weight: bold;
+    border-radius: 1em;
+    background-color: var(--color-accent-dark);
+    padding: 0.4em 0.8em;
+    color: var(--color-accent-lighter);
+    text-decoration: none;
+}
+
+.link-btn a:hover {
+    background-color: var(--color-accent-darker);
+    color: var(--color-accent-light);
+}
+
+h1, h2 {
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: var(--color-background-dark);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0.6em 0;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-link img {
+    height: 1.5em;
+    margin-right: 0.5em;
+}

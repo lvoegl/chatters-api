@@ -1,0 +1,13 @@
+<head th:fragment="head (title)">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="apple-touch-icon" sizes="180x180" th:href="@{/favico/apple-touch-icon.png}">
+  <link rel="icon" type="image/png" sizes="32x32" th:href="@{/favico/favicon-32x32.png}">
+  <link rel="icon" type="image/png" sizes="16x16" th:href="@{/favico/favicon-16x16.png}">
+  <link rel="manifest" th:href="@{/favico/site.webmanifest}">
+  <title th:text="'Twitch Chatter Tools' + (${title} != '' ? ' - ' + ${title} : '')">Title</title>
+  <link th:href="@{/css/index.css}" rel="stylesheet">
+</head>
