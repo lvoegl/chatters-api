@@ -41,7 +41,7 @@ public class Channel {
 
   private static TwitchScopes getScopeByName(String scopeName) {
     for (TwitchScopes scope : TwitchScopes.values()) {
-      if (scope.name().equals(scopeName)) {
+      if (scope.toString().equals(scopeName)) {
         return scope;
       }
     }
