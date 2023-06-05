@@ -49,6 +49,7 @@ public class Channel {
   }
 
   public void updateWithCredential(OAuth2Credential credential) {
+    this.refreshToken = credential.getRefreshToken();
     this.accessToken = credential.getAccessToken();
     this.expiresAt = computeExpiresAt(credential.getExpiresIn());
   }
