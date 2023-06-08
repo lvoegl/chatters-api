@@ -68,6 +68,24 @@ tasks.register("bootRunDev") {
   finalizedBy("bootRun")
 }
 
+tasks.bootBuildImage {
+  val registry = System.getenv("CONTAINER_REGISTRY")
+  val name = System.getenv("CONTAINER_NAME")
+  val version = System.getenv("CONTAINER_VERSION")
+  val login = System.getenv("CONTAINER_LOGIN")
+  val pass = System.getenv("CONTAINER_PASS")
+
+  imageName.set("${registry}/${name}:${version}")
+
+  docker {
+    publishRegistry {
+      username.set(login)
+      password.set(pass)
+      url.set("https://${registry}")
+    }
+  }
+}
+
 tasks.jacocoTestReport {
   dependsOn(tasks.test)
   reports {
