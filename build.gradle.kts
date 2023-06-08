@@ -54,6 +54,20 @@ jacoco {
   reportsDirectory.set(layout.buildDirectory.dir("jacoco"))
 }
 
+tasks.register("bootRunDev") {
+  group = "application"
+  description = "Run Spring application with dev profile"
+  dependencies {
+    implementation("com.h2database:h2:2.1.214")
+  }
+  doFirst {
+    tasks.bootRun.configure {
+      systemProperty("spring.profiles.active", "dev")
+    }
+  }
+  finalizedBy("bootRun")
+}
+
 tasks.jacocoTestReport {
   dependsOn(tasks.test)
   reports {
