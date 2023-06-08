@@ -33,7 +33,7 @@ dependencies {
 
 spotless {
   format("misc") {
-    target("*.md", "**/*.properties", ".gitignore")
+    target("**/*.properties", ".gitignore")
     trimTrailingWhitespace()
     indentWithTabs()
     endWithNewline()
