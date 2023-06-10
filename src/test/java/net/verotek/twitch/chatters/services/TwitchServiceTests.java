@@ -31,8 +31,12 @@ class TwitchServiceTests {
     return helixWrapper;
   }
 
+  private UserDto mapToUser(Object obj) {
+    return MAPPER.map(obj, UserDto.class);
+  }
+
   private Set<UserDto> mapToUsers(Collection<?> collection) {
-    return collection.stream().map(it -> MAPPER.map(it, UserDto.class)).collect(Collectors.toSet());
+    return collection.stream().map(this::mapToUser).collect(Collectors.toSet());
   }
 
   @Test
@@ -93,9 +97,7 @@ class TwitchServiceTests {
   void testGetCategorizedChatters() {
     TwitchClientHelixMock helixMock = new TwitchClientHelixMock();
 
-    Set<Chatter> owners = new HashSet<>();
     Chatter owner = helixMock.mockChatter("14", "owner1");
-    owners.add(owner);
 
     Set<Moderator> moderators = new HashSet<>();
     moderators.add(helixMock.mockModerator("17", "mod1"));
@@ -113,14 +115,14 @@ class TwitchServiceTests {
     viewers.add(helixMock.mockChatter("67", "chatter3"));
 
     Set<Chatter> allChatters = new HashSet<>();
-    allChatters.addAll(owners);
+    allChatters.add(owner);
     allChatters.addAll(helixMock.moderatorsToChatters(moderators));
     allChatters.addAll(helixMock.vipsToChatters(vips));
     allChatters.addAll(viewers);
 
     ChattersDto expectedChatters =
         new ChattersDto(
-            mapToUsers(owners), mapToUsers(moderators), mapToUsers(vips), mapToUsers(viewers));
+            mapToUser(owner), mapToUsers(moderators), mapToUsers(vips), mapToUsers(viewers));
 
     HelixWrapperService helixWrapperMock = mockHelixWrapper(moderators, vips, allChatters);
     TwitchService twitchService = new TwitchService(MAPPER, helixWrapperMock);

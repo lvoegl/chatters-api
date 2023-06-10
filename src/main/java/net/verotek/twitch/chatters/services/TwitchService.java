@@ -51,7 +51,7 @@ public class TwitchService {
                         } else if (vips.contains(chatter)) {
                           chattersDTO.addVip(chatter);
                         } else if (chatter.getId().equals(channelId)) {
-                          chattersDTO.addOwner(chatter);
+                          chattersDTO.setOwner(chatter);
                         } else {
                           chattersDTO.addViewer(chatter);
                         }

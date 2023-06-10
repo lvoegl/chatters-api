@@ -17,7 +17,7 @@ import lombok.ToString;
 @Schema(name = "Chatters")
 public class ChattersDto {
 
-  private Set<UserDto> owners;
+  private UserDto owner;
 
   private Set<UserDto> moderators;
 
@@ -29,11 +29,11 @@ public class ChattersDto {
     moderators = new HashSet<>();
     vips = new HashSet<>();
     viewers = new HashSet<>();
-    owners = new HashSet<>();
+    owner = null;
   }
 
-  public void addOwner(UserDto owner) {
-    owners.add(owner);
+  public void setOwner(UserDto owner) {
+    this.owner = owner;
   }
 
   public void addModerator(UserDto moderator) {
