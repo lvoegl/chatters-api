@@ -97,7 +97,7 @@ class TwitchServiceTests {
   void testGetCategorizedChatters() {
     TwitchClientHelixMock helixMock = new TwitchClientHelixMock();
 
-    Chatter owner = helixMock.mockChatter("14", "owner1");
+    Chatter broadcaster = helixMock.mockChatter("14", "broadcaster1");
 
     Set<Moderator> moderators = new HashSet<>();
     moderators.add(helixMock.mockModerator("17", "mod1"));
@@ -115,18 +115,18 @@ class TwitchServiceTests {
     viewers.add(helixMock.mockChatter("67", "chatter3"));
 
     Set<Chatter> allChatters = new HashSet<>();
-    allChatters.add(owner);
+    allChatters.add(broadcaster);
     allChatters.addAll(helixMock.moderatorsToChatters(moderators));
     allChatters.addAll(helixMock.vipsToChatters(vips));
     allChatters.addAll(viewers);
 
     ChattersDto expectedChatters =
         new ChattersDto(
-            mapToUser(owner), mapToUsers(moderators), mapToUsers(vips), mapToUsers(viewers));
+            mapToUser(broadcaster), mapToUsers(moderators), mapToUsers(vips), mapToUsers(viewers));
 
     HelixWrapperService helixWrapperMock = mockHelixWrapper(moderators, vips, allChatters);
     TwitchService twitchService = new TwitchService(MAPPER, helixWrapperMock);
-    ChattersDto chatters = twitchService.getCategorizedChatters(owner.getUserId(), null);
+    ChattersDto chatters = twitchService.getCategorizedChatters(broadcaster.getUserId(), null);
 
     assertThat(chatters).isEqualTo(expectedChatters);
   }
