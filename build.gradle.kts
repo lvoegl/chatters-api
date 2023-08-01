@@ -58,7 +58,7 @@ tasks.register("bootRunDev") {
   group = "application"
   description = "Run Spring application with dev profile"
   dependencies {
-    implementation("com.h2database:h2:2.1.214")
+    implementation("com.h2database:h2:2.2.220")
   }
   doFirst {
     tasks.bootRun.configure {
