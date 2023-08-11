@@ -1,7 +1,7 @@
 plugins {
   id("java")
   id("jacoco")
-  id("io.freefair.lombok") version "8.0.1"
+  id("io.freefair.lombok") version "8.2.1"
   id("com.diffplug.spotless") version "6.19.0"
   id("org.springframework.boot") version "3.1.2"
 }
