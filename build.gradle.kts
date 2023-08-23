@@ -26,7 +26,7 @@ dependencies {
   implementation("com.github.twitch4j:twitch4j:1.15.0")
 
   testImplementation("com.google.truth:truth:1.1.4")
-  testImplementation("org.mockito:mockito-core:5.3.1")
+  testImplementation("org.mockito:mockito-core:5.5.0")
   testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.3")
 }
