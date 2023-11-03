@@ -27,8 +27,8 @@ dependencies {
 
   testImplementation("com.google.truth:truth:1.1.5")
   testImplementation("org.mockito:mockito-core:5.7.0")
-  testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
-  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.3")
+  testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
 }
 
 spotless {
