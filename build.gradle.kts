@@ -1,7 +1,7 @@
 plugins {
   id("java")
   id("jacoco")
-  id("io.freefair.lombok") version "8.0.1"
+  id("io.freefair.lombok") version "8.4"
   id("com.diffplug.spotless") version "6.19.0"
   id("org.springframework.boot") version "3.1.2"
 }
@@ -25,10 +25,10 @@ dependencies {
   implementation("org.postgresql:postgresql:42.6.0")
   implementation("com.github.twitch4j:twitch4j:1.15.0")
 
-  testImplementation("com.google.truth:truth:1.1.4")
-  testImplementation("org.mockito:mockito-core:5.3.1")
+  testImplementation("com.google.truth:truth:1.1.5")
+  testImplementation("org.mockito:mockito-core:5.7.0")
   testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
-  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.3")
+  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
 }
 
 spotless {
