@@ -1,9 +1,9 @@
 plugins {
   id("java")
   id("jacoco")
-  id("io.freefair.lombok") version "8.0.1"
+  id("io.freefair.lombok") version "8.4"
   id("com.diffplug.spotless") version "6.19.0"
-  id("org.springframework.boot") version "3.1.0"
+  id("org.springframework.boot") version "3.1.2"
 }
 
 group = "net.verotek.twitch"
@@ -16,17 +16,17 @@ repositories {
 }
 
 dependencies {
-  implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.1.0")
-  implementation("org.springframework.boot:spring-boot-starter-web:3.1.0")
-  implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.1.0")
-  implementation("org.springframework.boot:spring-boot-devtools:3.1.0")
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.1.2")
+  implementation("org.springframework.boot:spring-boot-starter-web:3.1.2")
+  implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.1.2")
+  implementation("org.springframework.boot:spring-boot-devtools:3.1.2")
   implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
   implementation("org.modelmapper:modelmapper:3.1.1")
   implementation("org.postgresql:postgresql:42.6.0")
   implementation("com.github.twitch4j:twitch4j:1.15.0")
 
   testImplementation("com.google.truth:truth:1.1.5")
-  testImplementation("org.mockito:mockito-core:5.3.1")
+  testImplementation("org.mockito:mockito-core:5.7.0")
   testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.3")
 }
