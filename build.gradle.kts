@@ -3,7 +3,7 @@ plugins {
   id("jacoco")
   id("io.freefair.lombok") version "8.4"
   id("com.diffplug.spotless") version "6.25.0"
-  id("org.springframework.boot") version "3.1.2"
+  id("org.springframework.boot") version "3.2.2"
 }
 
 group = "net.verotek.twitch"
@@ -16,10 +16,10 @@ repositories {
 }
 
 dependencies {
-  implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.1.2")
-  implementation("org.springframework.boot:spring-boot-starter-web:3.1.2")
-  implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.1.2")
-  implementation("org.springframework.boot:spring-boot-devtools:3.1.2")
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.2.2")
+  implementation("org.springframework.boot:spring-boot-starter-web:3.2.2")
+  implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.2.2")
+  implementation("org.springframework.boot:spring-boot-devtools:3.2.2")
   implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
   implementation("org.modelmapper:modelmapper:3.2.0")
   implementation("org.postgresql:postgresql:42.7.1")
