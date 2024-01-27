@@ -21,7 +21,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.1.2")
   implementation("org.springframework.boot:spring-boot-devtools:3.1.2")
   implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
-  implementation("org.modelmapper:modelmapper:3.1.1")
+  implementation("org.modelmapper:modelmapper:3.2.0")
   implementation("org.postgresql:postgresql:42.6.0")
   implementation("com.github.twitch4j:twitch4j:1.15.0")
 
