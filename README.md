@@ -1,3 +1,5 @@
+![Code Coverage Badge](.github/badges/jacoco.svg)
+
 # Chatters API
 
 Twitch has restricted access to channels' chatters, moderator and VIP lists.
