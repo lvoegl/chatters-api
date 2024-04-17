@@ -53,8 +53,6 @@ To build an image yourself run `./gradlew bootBuildImage`
 Below you can find a docker compose deployment example with postgres & nightly package image
 
 ```
-version: "3.9"
-
 services:
   db:
     image: postgres:15
