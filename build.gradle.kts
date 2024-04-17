@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "net.verotek.twitch"
-version = "0.0.1"
+version = "1.0"
 java.sourceCompatibility = JavaVersion.VERSION_17
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 
