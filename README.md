@@ -55,10 +55,11 @@ Below you can find a docker compose deployment example with postgres & nightly p
 ```
 services:
   db:
-    image: postgres:15
+    image: postgres:16
     restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
+      PGUSER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: chatters
     networks:
