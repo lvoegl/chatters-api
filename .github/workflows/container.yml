@@ -4,12 +4,15 @@ on:
   push:
     branches:
       - main
+    tags:        
+      - "*"
   workflow_dispatch:
 
 env:
   CONTAINER_REGISTRY: ghcr.io
   CONTAINER_NAME: ${{ github.repository }}
-  CONTAINER_VERSION: nightly
+  CONTAINER_LOGIN: ${{ github.actor }}
+  CONTAINER_PASS: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   validate-wrapper:
@@ -35,8 +38,12 @@ jobs:
           cache: gradle
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Build and publish container image
+      - name: Build and publish container image (tagged)
+        if: github.ref_type == 'tag'
         run: ./gradlew bootBuildImage --publishImage
         env:
-          CONTAINER_LOGIN: ${{ github.actor }}
-          CONTAINER_PASS: ${{ secrets.GITHUB_TOKEN }}
+          CONTAINER_VERSION: ${{ github.ref_name }}
+      - name: Build and publish container image (latest)
+        run: ./gradlew bootBuildImage --publishImage
+        env:
+          CONTAINER_VERSION: nightly
