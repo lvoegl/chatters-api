@@ -23,7 +23,7 @@ dependencies {
   implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
   implementation("org.modelmapper:modelmapper:3.2.0")
   implementation("org.postgresql:postgresql:42.7.1")
-  implementation("com.github.twitch4j:twitch4j:1.19.0")
+  implementation("com.github.twitch4j:twitch4j:1.20.0")
 
   testImplementation("com.google.truth:truth:1.4.2")
   testImplementation("org.mockito:mockito-core:5.10.0")
