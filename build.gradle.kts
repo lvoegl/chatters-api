@@ -3,7 +3,7 @@ plugins {
   id("jacoco")
   id("io.freefair.lombok") version "8.6"
   id("com.diffplug.spotless") version "6.25.0"
-  id("org.springframework.boot") version "3.2.2"
+  id("org.springframework.boot") version "3.3.2"
 }
 
 group = "net.verotek.twitch"
