@@ -27,7 +27,7 @@ dependencies {
 
   testImplementation("com.google.truth:truth:1.4.2")
   testImplementation("org.mockito:mockito-core:5.10.0")
-  testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+  testImplementation("org.junit.jupiter:junit-jupiter-api:5.11.2")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
 }
 
