@@ -20,7 +20,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web:3.4.1")
   implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.4.1")
   implementation("org.springframework.boot:spring-boot-devtools:3.4.1")
-  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.4")
   implementation("org.modelmapper:modelmapper:3.2.1")
   implementation("org.postgresql:postgresql:42.7.3")
   implementation("com.github.twitch4j:twitch4j:1.23.0")
